@@ -15,6 +15,7 @@
 		E49F95DD1C51C776004149EC /* wordFrequencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95DC1C51C776004149EC /* wordFrequencyTests.swift */; };
 		E49F95E81C51C776004149EC /* wordFrequencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95E71C51C776004149EC /* wordFrequencyUITests.swift */; };
 		E49F95F61C51C852004149EC /* WordFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95F51C51C852004149EC /* WordFrequency.swift */; };
+		E49F95F81C5250F2004149EC /* backGround.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E49F95F71C5250F2004149EC /* backGround.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E49F95E71C51C776004149EC /* wordFrequencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordFrequencyUITests.swift; sourceTree = "<group>"; };
 		E49F95E91C51C776004149EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49F95F51C51C852004149EC /* WordFrequency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordFrequency.swift; sourceTree = "<group>"; };
+		E49F95F71C5250F2004149EC /* backGround.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backGround.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				E49F95F51C51C852004149EC /* WordFrequency.swift */,
 				E49F95CB1C51C776004149EC /* Main.storyboard */,
 				E49F95CE1C51C776004149EC /* Assets.xcassets */,
+				E49F95F71C5250F2004149EC /* backGround.jpeg */,
 				E49F95D01C51C776004149EC /* LaunchScreen.storyboard */,
 				E49F95D31C51C776004149EC /* Info.plist */,
 			);
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E49F95D21C51C776004149EC /* LaunchScreen.storyboard in Resources */,
+				E49F95F81C5250F2004149EC /* backGround.jpeg in Resources */,
 				E49F95CF1C51C776004149EC /* Assets.xcassets in Resources */,
 				E49F95CD1C51C776004149EC /* Main.storyboard in Resources */,
 			);
