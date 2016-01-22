@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E49F95C81C51C776004149EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95C71C51C776004149EC /* AppDelegate.swift */; };
+		E49F95CA1C51C776004149EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95C91C51C776004149EC /* ViewController.swift */; };
+		E49F95CD1C51C776004149EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49F95CB1C51C776004149EC /* Main.storyboard */; };
+		E49F95CF1C51C776004149EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49F95CE1C51C776004149EC /* Assets.xcassets */; };
+		E49F95D21C51C776004149EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49F95D01C51C776004149EC /* LaunchScreen.storyboard */; };
+		E49F95DD1C51C776004149EC /* wordFrequencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95DC1C51C776004149EC /* wordFrequencyTests.swift */; };
+		E49F95E81C51C776004149EC /* wordFrequencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95E71C51C776004149EC /* wordFrequencyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E49F95D91C51C776004149EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49F95BC1C51C776004149EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49F95C31C51C776004149EC;
+			remoteInfo = wordFrequency;
+		};
+		E49F95E41C51C776004149EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49F95BC1C51C776004149EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49F95C31C51C776004149EC;
+			remoteInfo = wordFrequency;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E49F95C41C51C776004149EC /* wordFrequency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wordFrequency.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49F95C71C51C776004149EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E49F95C91C51C776004149EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E49F95CC1C51C776004149EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E49F95CE1C51C776004149EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E49F95D11C51C776004149EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E49F95D31C51C776004149EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49F95D81C51C776004149EC /* wordFrequencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wordFrequencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49F95DC1C51C776004149EC /* wordFrequencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordFrequencyTests.swift; sourceTree = "<group>"; };
+		E49F95DE1C51C776004149EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49F95E31C51C776004149EC /* wordFrequencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wordFrequencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49F95E71C51C776004149EC /* wordFrequencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordFrequencyUITests.swift; sourceTree = "<group>"; };
+		E49F95E91C51C776004149EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E49F95C11C51C776004149EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49F95D51C51C776004149EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49F95E01C51C776004149EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E49F95BB1C51C776004149EC = {
+			isa = PBXGroup;
+			children = (
+				E49F95C61C51C776004149EC /* wordFrequency */,
+				E49F95DB1C51C776004149EC /* wordFrequencyTests */,
+				E49F95E61C51C776004149EC /* wordFrequencyUITests */,
+				E49F95C51C51C776004149EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E49F95C51C51C776004149EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E49F95C41C51C776004149EC /* wordFrequency.app */,
+				E49F95D81C51C776004149EC /* wordFrequencyTests.xctest */,
+				E49F95E31C51C776004149EC /* wordFrequencyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E49F95C61C51C776004149EC /* wordFrequency */ = {
+			isa = PBXGroup;
+			children = (
+				E49F95C71C51C776004149EC /* AppDelegate.swift */,
+				E49F95C91C51C776004149EC /* ViewController.swift */,
+				E49F95CB1C51C776004149EC /* Main.storyboard */,
+				E49F95CE1C51C776004149EC /* Assets.xcassets */,
+				E49F95D01C51C776004149EC /* LaunchScreen.storyboard */,
+				E49F95D31C51C776004149EC /* Info.plist */,
+			);
+			path = wordFrequency;
+			sourceTree = "<group>";
+		};
+		E49F95DB1C51C776004149EC /* wordFrequencyTests */ = {
+			isa = PBXGroup;
+			children = (
+				E49F95DC1C51C776004149EC /* wordFrequencyTests.swift */,
+				E49F95DE1C51C776004149EC /* Info.plist */,
+			);
+			path = wordFrequencyTests;
+			sourceTree = "<group>";
+		};
+		E49F95E61C51C776004149EC /* wordFrequencyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E49F95E71C51C776004149EC /* wordFrequencyUITests.swift */,
+				E49F95E91C51C776004149EC /* Info.plist */,
+			);
+			path = wordFrequencyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E49F95C31C51C776004149EC /* wordFrequency */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49F95EC1C51C776004149EC /* Build configuration list for PBXNativeTarget "wordFrequency" */;
+			buildPhases = (
+				E49F95C01C51C776004149EC /* Sources */,
+				E49F95C11C51C776004149EC /* Frameworks */,
+				E49F95C21C51C776004149EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wordFrequency;
+			productName = wordFrequency;
+			productReference = E49F95C41C51C776004149EC /* wordFrequency.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E49F95D71C51C776004149EC /* wordFrequencyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49F95EF1C51C776004149EC /* Build configuration list for PBXNativeTarget "wordFrequencyTests" */;
+			buildPhases = (
+				E49F95D41C51C776004149EC /* Sources */,
+				E49F95D51C51C776004149EC /* Frameworks */,
+				E49F95D61C51C776004149EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E49F95DA1C51C776004149EC /* PBXTargetDependency */,
+			);
+			name = wordFrequencyTests;
+			productName = wordFrequencyTests;
+			productReference = E49F95D81C51C776004149EC /* wordFrequencyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E49F95E21C51C776004149EC /* wordFrequencyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49F95F21C51C776004149EC /* Build configuration list for PBXNativeTarget "wordFrequencyUITests" */;
+			buildPhases = (
+				E49F95DF1C51C776004149EC /* Sources */,
+				E49F95E01C51C776004149EC /* Frameworks */,
+				E49F95E11C51C776004149EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E49F95E51C51C776004149EC /* PBXTargetDependency */,
+			);
+			name = wordFrequencyUITests;
+			productName = wordFrequencyUITests;
+			productReference = E49F95E31C51C776004149EC /* wordFrequencyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E49F95BC1C51C776004149EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = LucasRibeiro;
+				TargetAttributes = {
+					E49F95C31C51C776004149EC = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					E49F95D71C51C776004149EC = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = E49F95C31C51C776004149EC;
+					};
+					E49F95E21C51C776004149EC = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = E49F95C31C51C776004149EC;
+					};
+				};
+			};
+			buildConfigurationList = E49F95BF1C51C776004149EC /* Build configuration list for PBXProject "wordFrequency" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E49F95BB1C51C776004149EC;
+			productRefGroup = E49F95C51C51C776004149EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E49F95C31C51C776004149EC /* wordFrequency */,
+				E49F95D71C51C776004149EC /* wordFrequencyTests */,
+				E49F95E21C51C776004149EC /* wordFrequencyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E49F95C21C51C776004149EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49F95D21C51C776004149EC /* LaunchScreen.storyboard in Resources */,
+				E49F95CF1C51C776004149EC /* Assets.xcassets in Resources */,
+				E49F95CD1C51C776004149EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49F95D61C51C776004149EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49F95E11C51C776004149EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E49F95C01C51C776004149EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49F95CA1C51C776004149EC /* ViewController.swift in Sources */,
+				E49F95C81C51C776004149EC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49F95D41C51C776004149EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49F95DD1C51C776004149EC /* wordFrequencyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49F95DF1C51C776004149EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49F95E81C51C776004149EC /* wordFrequencyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E49F95DA1C51C776004149EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E49F95C31C51C776004149EC /* wordFrequency */;
+			targetProxy = E49F95D91C51C776004149EC /* PBXContainerItemProxy */;
+		};
+		E49F95E51C51C776004149EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E49F95C31C51C776004149EC /* wordFrequency */;
+			targetProxy = E49F95E41C51C776004149EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E49F95CB1C51C776004149EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E49F95CC1C51C776004149EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E49F95D01C51C776004149EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E49F95D11C51C776004149EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E49F95EA1C51C776004149EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E49F95EB1C51C776004149EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E49F95ED1C51C776004149EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wordFrequency/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LucasRibeiro.wordFrequency;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E49F95EE1C51C776004149EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wordFrequency/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LucasRibeiro.wordFrequency;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E49F95F01C51C776004149EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = wordFrequencyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LucasRibeiro.wordFrequencyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wordFrequency.app/wordFrequency";
+			};
+			name = Debug;
+		};
+		E49F95F11C51C776004149EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = wordFrequencyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LucasRibeiro.wordFrequencyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wordFrequency.app/wordFrequency";
+			};
+			name = Release;
+		};
+		E49F95F31C51C776004149EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = wordFrequencyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LucasRibeiro.wordFrequencyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = wordFrequency;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E49F95F41C51C776004149EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = wordFrequencyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LucasRibeiro.wordFrequencyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = wordFrequency;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E49F95BF1C51C776004149EC /* Build configuration list for PBXProject "wordFrequency" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49F95EA1C51C776004149EC /* Debug */,
+				E49F95EB1C51C776004149EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E49F95EC1C51C776004149EC /* Build configuration list for PBXNativeTarget "wordFrequency" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49F95ED1C51C776004149EC /* Debug */,
+				E49F95EE1C51C776004149EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E49F95EF1C51C776004149EC /* Build configuration list for PBXNativeTarget "wordFrequencyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49F95F01C51C776004149EC /* Debug */,
+				E49F95F11C51C776004149EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E49F95F21C51C776004149EC /* Build configuration list for PBXNativeTarget "wordFrequencyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49F95F31C51C776004149EC /* Debug */,
+				E49F95F41C51C776004149EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E49F95BC1C51C776004149EC /* Project object */;
+}
