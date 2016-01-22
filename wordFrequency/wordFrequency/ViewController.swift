@@ -8,11 +8,29 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //initializing class that has methods related to the challenging
+        let wordfrequency = WordFrequency()
+        do{
+            //reading file and testing its management
+            try wordfrequency.readFile()
+        }
+        catch FileError.readingIssue {
+            print("Unknown problem reading file")
+        }
+        catch FileError.writingIssue {
+            print("Unknown problem writing to file")
+        }
+        catch{
+            print("Unknown error")
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

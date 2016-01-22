@@ -14,6 +14,7 @@
 		E49F95D21C51C776004149EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49F95D01C51C776004149EC /* LaunchScreen.storyboard */; };
 		E49F95DD1C51C776004149EC /* wordFrequencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95DC1C51C776004149EC /* wordFrequencyTests.swift */; };
 		E49F95E81C51C776004149EC /* wordFrequencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95E71C51C776004149EC /* wordFrequencyUITests.swift */; };
+		E49F95F61C51C852004149EC /* WordFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F95F51C51C852004149EC /* WordFrequency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E49F95E31C51C776004149EC /* wordFrequencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wordFrequencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49F95E71C51C776004149EC /* wordFrequencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordFrequencyUITests.swift; sourceTree = "<group>"; };
 		E49F95E91C51C776004149EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49F95F51C51C852004149EC /* WordFrequency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordFrequency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				E49F95C71C51C776004149EC /* AppDelegate.swift */,
 				E49F95C91C51C776004149EC /* ViewController.swift */,
+				E49F95F51C51C852004149EC /* WordFrequency.swift */,
 				E49F95CB1C51C776004149EC /* Main.storyboard */,
 				E49F95CE1C51C776004149EC /* Assets.xcassets */,
 				E49F95D01C51C776004149EC /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				E49F95CA1C51C776004149EC /* ViewController.swift in Sources */,
 				E49F95C81C51C776004149EC /* AppDelegate.swift in Sources */,
+				E49F95F61C51C852004149EC /* WordFrequency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
