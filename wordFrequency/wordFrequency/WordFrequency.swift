@@ -12,7 +12,9 @@ import Foundation
 enum CustomError: ErrorType {
     case writingIssue
     case readingIssue
+    case sortingIssue
     case cleaningIssue
+
 }
 
 class WordFrequency: NSObject {
@@ -25,7 +27,7 @@ class WordFrequency: NSObject {
         let fileName = "words.txt"
         
         //standard text to write to file
-        let textToWriteToFile = "Som?e ? sea;D:sSdDrch !t,e,xt . doi"
+        let textToWriteToFile = "uma uma duas uma quatro quatro quatro quatro duas tres vamos fazer mais gostaria de fazer mais"
         
         //getting directory and adding the file name on its final
         if let dir : NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
@@ -51,18 +53,51 @@ class WordFrequency: NSObject {
     }
     
     //create function with two parameters and apply sort to file content
-    func sortWithWordFrequency(textToBeSorted: NSString, numberOfItensToReturn: Int) throws{
+    func sortWithWordFrequency(textToBeSorted: NSString, numberOfItensToReturn: Int) throws -> NSMutableArray{
         do{
             //lowering all text
             let loweredString = textToBeSorted.lowercaseString
-            print(loweredString)
             
             //separating words that have special characters
             let treatedString = try self.cleanStringWithSpecialCharacters(loweredString)
-            print(treatedString)
+            
+            //cleaning white spaces from array
+            let arrayWithSeparatedWords = treatedString.componentsSeparatedByString(" ")
+            let cleanedArray = arrayWithSeparatedWords.filter() {
+                $0 != ""
+            }
+            
+            //creating dictionary with word appearing count as value
+            let dictionaryWithCountedWords = self.createDictionaryWithWordAppearingCount(cleanedArray)
+            
+            //sort dictionary keys by appearing counter(value)
+            let sortedKeys = (dictionaryWithCountedWords as NSDictionary).keysSortedByValueUsingSelector("compare:")
+            
+            let treatedArray = NSMutableArray()
+            //creating array on reverse mode
+            for item in sortedKeys.reverse() {
+                treatedArray.addObject(item)
+            }
+            
+            var numberMaximumOfItemsToReturn = 0
+            //create array with the correct number of items to return
+            //if the user asks for more items than the software has
+            if((treatedArray.count - numberOfItensToReturn) < 0){
+                numberMaximumOfItemsToReturn = treatedArray.count
+            }
+            else{
+                numberMaximumOfItemsToReturn = (treatedArray.count - numberOfItensToReturn)
+            }
+            let decreasedTreatedArray = NSMutableArray()
+            for var index = 0; index < numberMaximumOfItemsToReturn; ++index {
+                decreasedTreatedArray.addObject(treatedArray[index])
+            }
+            
+            //return array with correct size and sorted
+            return decreasedTreatedArray
         }
-        catch CustomError.cleaningIssue{
-            throw CustomError.cleaningIssue
+        catch CustomError.sortingIssue{
+            throw CustomError.sortingIssue
         }
     }
     
@@ -89,5 +124,24 @@ class WordFrequency: NSObject {
             }
         }
         return newString
+    }
+    
+    //counting how many times each word appears
+    func createDictionaryWithWordAppearingCount(arrayWithWords: [String]) -> NSMutableDictionary{
+        let dictionaryWithCountedWords = NSMutableDictionary()
+        
+        for var index = 0; index < arrayWithWords.count; ++index{
+            //the dictionary already contains the word and will count one more on the key value
+            if(dictionaryWithCountedWords[arrayWithWords[index]] != nil){
+                var pastWordCounter = (dictionaryWithCountedWords.valueForKey(arrayWithWords[index]) as! Int)
+                ++pastWordCounter
+                dictionaryWithCountedWords.setValue(pastWordCounter, forKey: arrayWithWords[index])
+            }
+            //the dictionary does not contain the word and start one as word counter as it is the first appearence
+            else{
+                dictionaryWithCountedWords.setValue(1, forKey: arrayWithWords[index])
+            }
+        }
+        return dictionaryWithCountedWords
     }
 }

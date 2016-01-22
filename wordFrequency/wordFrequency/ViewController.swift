@@ -22,8 +22,9 @@ class ViewController: UIViewController {
             //reading file and testing its management
             try wordFrequency.readFile()
             
-            //just keep going if had successful try
-            self.sortWithWordFrequency(5)
+            //method with tho parameters is in WordFrequency class
+            let arrayWithWordFrequency = self.sortWithWordFrequency(10)
+            print(arrayWithWordFrequency)
         }
         catch CustomError.readingIssue {
             print("Unknown problem reading file")
@@ -40,19 +41,21 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func sortWithWordFrequency(numberOfItensToReturn: Int){
+    func sortWithWordFrequency(numberOfItensToReturn: Int)->NSMutableArray {
         do{
             //apply sort algorithm just in WordFrequency class.
             //method wrote to handle exceptions
-           try wordFrequency.sortWithWordFrequency(wordFrequency.fileContent, numberOfItensToReturn: numberOfItensToReturn)
-            print("cleaned")
+           let arrayWithWordFrequency = try wordFrequency.sortWithWordFrequency(wordFrequency.fileContent, numberOfItensToReturn: numberOfItensToReturn)
+            return arrayWithWordFrequency
+            
         }
-        catch CustomError.cleaningIssue{
-            print("Error cleaning file")
+        catch CustomError.sortingIssue{
+            print("Error sorting file")
         }
         catch{
             print("Unknow error when sorting file")
         }
+        return NSMutableArray()
     }
 }
 
