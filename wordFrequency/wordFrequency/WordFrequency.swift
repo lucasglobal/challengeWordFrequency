@@ -14,17 +14,17 @@ enum CustomError: ErrorType {
     case readingIssue
     case sortingIssue
     case cleaningIssue
-
 }
 
 class WordFrequency: NSObject {
   
     var fileContent: NSString = ""
+    //name of file that will be used to manage program
+    let fileName = "words.txt"
+    var standardPath = ""
     
-    func readFile() throws{
+    func readFileFirstTime() throws{
         
-        //name of file that will be used to manage program
-        let fileName = "words.txt"
         
         //standard text to write to file
         let textToWriteToFile = "Type your text here"
@@ -32,28 +32,26 @@ class WordFrequency: NSObject {
         //getting directory and adding the file name on its final
         if let dir : NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
             let path = dir.stringByAppendingPathComponent(fileName);
+            standardPath = path
             
-            //writing to file
-            do {
-                try textToWriteToFile.writeToFile(path, atomically: false, encoding: NSUTF8StringEncoding)
+            do{
+                try self.writeToFile(textToWriteToFile)
             }
-            catch {
+            catch{
                 throw CustomError.writingIssue
             }
-            
-            //reading file
-            do {
-                let contentRead = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-                self.fileContent = contentRead
+            do{
+                try self.readToFile()
             }
-            catch {
+            catch{
                 throw CustomError.readingIssue
             }
         }
     }
     
+    
     //create function with two parameters and apply sort to file content
-    func sortWithWordFrequency(textToBeSorted: NSString, numberOfItensToReturn: Int) throws -> NSMutableArray{
+    func sortWithWordFrequency(textToBeSorted: NSString, var numberOfItensToReturn: Int) throws -> NSMutableArray{
         do{
             //lowering all text
             let loweredString = textToBeSorted.lowercaseString
@@ -85,8 +83,11 @@ class WordFrequency: NSObject {
             if((treatedArray.count - numberOfItensToReturn) < 0){
                 numberMaximumOfItemsToReturn = treatedArray.count
             }
+            else if(numberOfItensToReturn > treatedArray.count){
+                numberOfItensToReturn = treatedArray.count
+            }
             else{
-                numberMaximumOfItemsToReturn = (treatedArray.count - numberOfItensToReturn)
+                numberMaximumOfItemsToReturn = numberOfItensToReturn
             }
             let decreasedTreatedArray = NSMutableArray()
             for var index = 0; index < numberMaximumOfItemsToReturn; ++index {
@@ -144,4 +145,27 @@ class WordFrequency: NSObject {
         }
         return dictionaryWithCountedWords
     }
+    func writeToFile(stringToWrite: NSString) throws{
+        //writing to file
+        do {
+            try stringToWrite.writeToFile(standardPath, atomically: false, encoding: NSUTF8StringEncoding)
+        }
+        catch {
+            throw CustomError.writingIssue
+        }
+        
+    }
+    func readToFile() throws{
+        //reading file
+        do {
+            let contentRead = try NSString(contentsOfFile: standardPath, encoding: NSUTF8StringEncoding)
+            fileContent = contentRead
+        }
+        catch {
+            throw CustomError.readingIssue
+        }
+    }
 }
+
+
+

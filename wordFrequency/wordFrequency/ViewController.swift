@@ -12,26 +12,33 @@ import UIKit
 
 class ViewController: UIViewController{
     
-    @IBAction func buttonNext(sender: AnyObject) {
-    
-    }
-    @IBOutlet weak var fieldText: UITextField!
     @IBOutlet weak var fieldTextUser: UITextField!
+    @IBAction func actionNext(sender: AnyObject){
+        
+        do{
+            do{
+                //saving again to get data from text document as specified
+                try wordFrequency.writeToFile(self.fieldTextUser.text!)
+                try wordFrequency.readToFile()
+                self.sortWithWordFrequency(3)
+            }
+            
+        }
+        catch{
+            print("Writing/reading issues")
+        }
+    }
     //initializing class that has methods related to the challenging
     var wordFrequency: WordFrequency = WordFrequency()
-    var textFromTextView: String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         do{
             //reading file and testing its management
-            try wordFrequency.readFile()
-            
+            try wordFrequency.readFileFirstTime()
+
             //method with tho parameters is in WordFrequency class
-            let arrayWithWordFrequency = self.sortWithWordFrequency(10)
-            print(arrayWithWordFrequency)
-            
+            self.sortWithWordFrequency(3)
         }
 
         catch CustomError.readingIssue {
@@ -43,6 +50,7 @@ class ViewController: UIViewController{
         catch{
             print("Unknown error")
         }
+        //updating field text
         self.fieldTextUser.text = wordFrequency.fileContent as String
 
         //Looks for single or multiple taps.
@@ -61,13 +69,18 @@ class ViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func sortWithWordFrequency(numberOfItensToReturn: Int)->NSMutableArray {
+    func sortWithWordFrequency(numberOfItensToReturn: Int){
         do{
             //apply sort algorithm just in WordFrequency class.
             //method wrote to handle exceptions
            let arrayWithWordFrequency = try wordFrequency.sortWithWordFrequency(wordFrequency.fileContent, numberOfItensToReturn: numberOfItensToReturn)
-            return arrayWithWordFrequency
-            
+            do{
+                //saving
+                try wordFrequency.writeToFile(arrayWithWordFrequency.componentsJoinedByString(","))
+            }
+            catch{
+                print("Writing issue")
+            }
         }
         catch CustomError.sortingIssue{
             print("Error sorting file")
@@ -75,8 +88,7 @@ class ViewController: UIViewController{
         catch{
             print("Unknow error when sorting file")
         }
-        return NSMutableArray()
+        
     }
-    
 }
 
