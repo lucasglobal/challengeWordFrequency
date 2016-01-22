@@ -10,11 +10,17 @@ import UIKit
 
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
+    @IBAction func buttonNext(sender: AnyObject) {
+    
+    }
+    @IBOutlet weak var fieldText: UITextField!
+    @IBOutlet weak var fieldTextUser: UITextField!
     //initializing class that has methods related to the challenging
     var wordFrequency: WordFrequency = WordFrequency()
-
+    var textFromTextView: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +31,9 @@ class ViewController: UIViewController {
             //method with tho parameters is in WordFrequency class
             let arrayWithWordFrequency = self.sortWithWordFrequency(10)
             print(arrayWithWordFrequency)
+            
         }
+
         catch CustomError.readingIssue {
             print("Unknown problem reading file")
         }
@@ -35,8 +43,20 @@ class ViewController: UIViewController {
         catch{
             print("Unknown error")
         }
+        self.fieldTextUser.text = wordFrequency.fileContent as String
+
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
-    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    override func viewDidAppear(animated: Bool) {
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,5 +77,6 @@ class ViewController: UIViewController {
         }
         return NSMutableArray()
     }
+    
 }
 

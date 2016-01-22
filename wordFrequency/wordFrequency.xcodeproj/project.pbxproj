@@ -490,6 +490,7 @@
 				E49F95EE1C51C776004149EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E49F95EF1C51C776004149EC /* Build configuration list for PBXNativeTarget "wordFrequencyTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +499,7 @@
 				E49F95F11C51C776004149EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E49F95F21C51C776004149EC /* Build configuration list for PBXNativeTarget "wordFrequencyUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +508,7 @@
 				E49F95F41C51C776004149EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

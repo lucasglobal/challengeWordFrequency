@@ -27,7 +27,7 @@ class WordFrequency: NSObject {
         let fileName = "words.txt"
         
         //standard text to write to file
-        let textToWriteToFile = "uma uma duas uma quatro quatro quatro quatro duas tres vamos fazer mais gostaria de fazer mais"
+        let textToWriteToFile = "Type your text here"
         
         //getting directory and adding the file name on its final
         if let dir : NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
